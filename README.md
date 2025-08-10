@@ -1,4 +1,4 @@
-# Pokémon Red and Blue [![Build Status][ci-badge]][ci]
+# Pokémon: Kanto Story Expansion [![Build Status][ci-badge]][ci]
 
 This is a disassembly of Pokémon Red and Blue.
 

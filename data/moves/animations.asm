@@ -164,6 +164,8 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw CrunchAnim
+	dw ShadowBallAnim
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim
@@ -1141,6 +1143,17 @@ SubstituteAnim:
 	battle_anim SUBSTITUTE, SE_SLIDE_MON_OFF
 	battle_anim NO_MOVE, SUBANIM_0_BALL_POOF, 0, 8
 	battle_anim NO_MOVE, SE_SUBSTITUTE_MON
+	db -1 ; end
+
+CrunchAnim:
+	battle_anim LEECH_SEED, SE_DARK_SCREEN_PALETTE
+	battle_anim SUPER_FANG, SUBANIM_1_STAR_BIG_MOVING, 1, 6
+	battle_anim NO_MOVE, SE_RESET_SCREEN_PALETTE
+	db -1 ; end
+
+ShadowBallAnim:
+	battle_anim BARRAGE, SUBANIM_1_CIRCLE_BLACK_TOSS, 1, 3
+	battle_anim NO_MOVE, SE_WAVY_SCREEN
 	db -1 ; end
 
 BallTossAnim:
