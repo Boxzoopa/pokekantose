@@ -149,8 +149,7 @@ ENDC
 	xor a ; EXCLAMATION_BUBBLE
 	ld [wWhichEmotionBubble], a
 	predef EmotionBubble
-	;ld a, PAD_CTRL_PAD
-	ld a, $ff
+	ld a, PAD_CTRL_PAD
 	ld [wJoyIgnore], a
 	xor a
 	ldh [hJoyHeld], a
@@ -164,8 +163,6 @@ DisplayEnemyTrainerTextAndStartBattle::
 	ld a, [wStatusFlags5]
 	and 1 << BIT_SCRIPTED_NPC_MOVEMENT
 	ret nz ; return if the enemy trainer hasn't finished walking to the player's sprite
-	farcall FaceEnemyTrainer
-	xor a
 	ld [wJoyIgnore], a
 	ld a, [wSpriteIndex]
 	ldh [hSpriteIndex], a

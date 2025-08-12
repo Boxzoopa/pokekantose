@@ -9,7 +9,7 @@ TypeNames:
 	dw .Rock
 	dw .Bird
 	dw .Bug
-	dw .Dark
+	dw .Ghost
 
 REPT UNUSED_TYPES_END - UNUSED_TYPES
 	dw .Normal
@@ -22,7 +22,6 @@ ENDR
 	dw .Psychic
 	dw .Ice
 	dw .Dragon
-	dw .Ghost
 
 	assert_table_length NUM_TYPES
 
@@ -42,4 +41,3 @@ ENDR
 .Bug:      db "BUG@"
 .Ghost:    db "GHOST@"
 .Dragon:   db "DRAGON@"
-.Dark:     db "DARK@"
